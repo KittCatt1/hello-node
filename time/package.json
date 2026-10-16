@@ -1,0 +1,7 @@
+{
+"name": "time-service",
+"version": "1.0.0",
+"description": "Returns the current time as JSON",
+"main": "src/server.js",
+"scripts": { "start": "node src/server.js" }
+}

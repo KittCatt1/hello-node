@@ -1,0 +1,17 @@
+services:
+  web:
+    build: ./web
+    image: hello-node-web
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      TIME_URL: "http://time:4000/"
+    depends_on:
+      - time
+
+  time:
+    build: ./time
+    image: hello-node-time
+    environment:
+      PORT: "4000"
